@@ -16,6 +16,7 @@ class SystemCall {
     }
     public function __invoke(Task $task, Scheduler $scheduler) {
         $callback = $this->callback; // Can't call it directly in PHP :/
+        var_dump($callback);die;
         return $callback($task, $scheduler);
     }
 
